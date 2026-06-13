@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Generator Pro</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>🎨 CSS Generator Pro</h1>
+
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+    </header>
+
+    <!-- Controls -->
+
+    <div class="controls">
+
+        <div class="control-card">
+
+            <h2>📦 Box Shadow</h2>
+
+            <label>X Axis</label>
+            <input type="range" id="shadowX" min="-50" max="50" value="10">
+
+            <label>Y Axis</label>
+            <input type="range" id="shadowY" min="-50" max="50" value="10">
+
+            <label>Blur</label>
+            <input type="range" id="blur" min="0" max="100" value="20">
+
+            <label>Spread</label>
+            <input type="range" id="spread" min="-20" max="50" value="0">
+
+        </div>
+
+        <div class="control-card">
+
+            <h2>⭕ Border Radius</h2>
+
+            <label>Radius</label>
+            <input type="range" id="radius" min="0" max="100" value="20">
+
+        </div>
+
+        <div class="control-card">
+
+            <h2>🌈 Gradient</h2>
+
+            <label>Color 1</label>
+            <input type="color" id="color1" value="#3b82f6">
+
+            <label>Color 2</label>
+            <input type="color" id="color2" value="#22c55e">
+
+            <label>Angle</label>
+            <input type="range" id="angle" min="0" max="360" value="90">
+
+        </div>
+
+        <div class="control-card">
+
+            <h2>🪟 Glassmorphism</h2>
+
+            <label>Opacity</label>
+            <input type="range" id="opacity" min="0" max="100" value="20">
+
+            <label>Blur Strength</label>
+            <input type="range" id="glassBlur" min="0" max="50" value="10">
+
+        </div>
+
+    </div>
+
+    <!-- Preview -->
+
+    <div class="preview-section">
+
+        <h2>👀 Live Preview</h2>
+
+        <div id="previewBox">
+            Preview Box
+        </div>
+
+    </div>
+
+    <!-- Generated CSS -->
+
+    <div class="code-section">
+
+        <h2>💻 Generated CSS</h2>
+
+        <textarea
+            id="cssOutput"
+            readonly
+        ></textarea>
+
+    </div>
+
+    <!-- Actions -->
+
+    <div class="action-buttons">
+
+        <button onclick="copyCSS()">
+            📋 Copy CSS
+        </button>
+
+        <button onclick="resetControls()">
+            🔄 Reset
+        </button>
+
+    </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
